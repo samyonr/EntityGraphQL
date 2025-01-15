@@ -1,0 +1,7 @@
+mutation AddPerson($personInputModel: PersonInputModel!) {
+    addPerson(inputModel: $personInputModel) {
+        id
+        name
+        age
+    }
+}

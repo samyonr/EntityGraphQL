@@ -1,0 +1,42 @@
+﻿{
+  addPersonResult: {
+    ContextData: {},
+    DataFactory: {},
+    Errors: [
+      {
+        Code: SS1000,
+        Exception: {
+          Data: {},
+          HResult: -2147467261,
+          Message: Value cannot be null.,
+          Source: EntityGraphQL.AspNet.Extra.Tests,
+          StackTrace:
+   at EntityGraphQL.AspNet.Extra.Tests.State.AddPersonBuilder.Deserialize_NonNullableIAddPerson_AddPerson(Nullable`1 obj) in {ProjectDirectory}obj\Debug\net9.0\berry\AppClient.Client.cs:line 1185
+   at EntityGraphQL.AspNet.Extra.Tests.State.AddPersonBuilder.BuildData(JsonElement obj) in {ProjectDirectory}obj\Debug\net9.0\berry\AppClient.Client.cs:line 1178
+   at StrawberryShake.OperationResultBuilder`1.Build(Response`1 response)
+        },
+        Extensions: {
+          StackTrace:
+   at EntityGraphQL.AspNet.Extra.Tests.State.AddPersonBuilder.Deserialize_NonNullableIAddPerson_AddPerson(Nullable`1 obj) in {ProjectDirectory}obj\Debug\net9.0\berry\AppClient.Client.cs:line 1185
+   at EntityGraphQL.AspNet.Extra.Tests.State.AddPersonBuilder.BuildData(JsonElement obj) in {ProjectDirectory}obj\Debug\net9.0\berry\AppClient.Client.cs:line 1178
+   at StrawberryShake.OperationResultBuilder`1.Build(Response`1 response)
+        },
+        Message: Value cannot be null.
+      }
+    ],
+    Extensions: {}
+  },
+  getPersonResult: {
+    ContextData: {},
+    Data: {
+      People: []
+    },
+    DataFactory: {},
+    DataInfo: {
+      EntityIds: [],
+      People: []
+    },
+    Errors: [],
+    Extensions: {}
+  }
+}

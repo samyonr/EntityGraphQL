@@ -1,0 +1,25 @@
+﻿{
+  addPersonResult: {
+    ContextData: {},
+    DataFactory: {},
+    Errors: [
+      {
+        Message: Age must be greater than or equal to 0
+      }
+    ],
+    Extensions: {}
+  },
+  getPersonResult: {
+    ContextData: {},
+    Data: {
+      People: []
+    },
+    DataFactory: {},
+    DataInfo: {
+      EntityIds: [],
+      People: []
+    },
+    Errors: [],
+    Extensions: {}
+  }
+}

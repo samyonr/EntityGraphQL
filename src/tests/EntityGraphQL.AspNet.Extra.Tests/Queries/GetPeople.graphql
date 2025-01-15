@@ -1,0 +1,17 @@
+query GetPeople {
+    people {
+        id
+        name
+        age
+        dogs {
+            id
+            name
+            age
+        }
+        cats {
+            id
+            name
+            age
+        }
+    }
+}

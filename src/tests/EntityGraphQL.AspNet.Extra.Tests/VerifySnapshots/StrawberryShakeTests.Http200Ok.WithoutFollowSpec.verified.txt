@@ -1,0 +1,25 @@
+﻿{
+  addPersonResult: {
+    ContextData: {},
+    DataFactory: {},
+    Errors: [
+      {
+        Message: Response status code does not indicate success: 400 (Bad Request).
+      }
+    ],
+    Extensions: {}
+  },
+  getPersonResult: {
+    ContextData: {},
+    Data: {
+      People: []
+    },
+    DataFactory: {},
+    DataInfo: {
+      EntityIds: [],
+      People: []
+    },
+    Errors: [],
+    Extensions: {}
+  }
+}

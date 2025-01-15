@@ -1,0 +1,25 @@
+GET https://localhost:7155/schema
+x-key: 654321
+
+###
+
+
+# GraphQL query to get people
+POST https://localhost:7155/graphql
+x-key: 654321
+Content-Type: application/json
+
+{
+  "query": "query People { people { id name age } }"
+}
+
+###
+
+# GraphQL mutation to add a person
+POST https://localhost:7155/graphql
+x-key: 654321
+Content-Type: application/json
+
+{
+  "query": "mutation AddPerson { addPerson(inputModel: { name: \"Bob\", age: 22 }) { id name age } }"
+}

@@ -1,0 +1,86 @@
+schema {
+  query: Query
+  mutation: Mutation
+}
+
+type Cat implements Pet {
+  lovesSleeping: Boolean!
+  id: Int!
+  age: Int!
+  name: String
+  ownerId: Int!
+  owner: Person!
+}
+
+"Char scalar"
+scalar Char
+
+"Date with time scalar"
+scalar Date
+
+"Date value only scalar"
+scalar DateOnly
+
+"DateTimeOffset scalar"
+scalar DateTimeOffset
+
+type Dog implements Pet {
+  lovesChasingSticks: Boolean!
+  id: Int!
+  age: Int!
+  name: String
+  ownerId: Int!
+  owner: Person!
+}
+
+type Mutation {
+  "Add person"
+  addPerson(inputModel: PersonInputModel!): Person!
+}
+
+type Person {
+  id: Int!
+  name: String
+  age: Int!
+  dogs: [Dog!]!
+  "Return a Cat by its Id"
+  cat(id: Int!): Cat
+  cats: [Cat!]!
+}
+
+input PersonInputModel {
+  name: String!
+  age: Int!
+}
+
+interface Pet {
+  id: Int!
+  age: Int!
+  name: String
+  ownerId: Int!
+  owner: Person!
+}
+
+"The query type, represents all of the entry points into our object graph"
+type Query {
+  "Return a Dog by its Id"
+  dog(id: Int!): Dog
+  "Return all Dogs using a filter"
+  dogs(filter: String): [Dog]
+  "Return a Cat by its Id"
+  cat(id: Int!): Cat
+  "Return all Cats using a filter"
+  cats(filter: String): [Cat]
+  "Return a Pet by its Id"
+  pet(id: Int!): Pet
+  "Return all Pets using a filter"
+  pets(filter: String): [Pet]
+  "Return a Person by its Id"
+  person(id: Int!): Person
+  people: [Person!]!
+  "Return all Persons using a filter"
+  persons(filter: String): [Person]
+}
+
+"Time value only scalar"
+scalar TimeOnly
